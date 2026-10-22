@@ -1,0 +1,34 @@
+{
+  "name": "vsix-packager",
+  "displayName": "VSIX Packager",
+  "description": "Package another VS Code extension as a VSIX without using the vsce CLI.",
+  "version": "1.0.0",
+  "publisher": "local-tools",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vsixPackager.packageExtension",
+        "title": "Package Another Extension as VSIX"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.0.0"
+  }
+}
